@@ -1,3 +1,8 @@
+<!--Things need to be done
+1) Form validation using javacsript
+2)CSS styling
+3) Add anything necessary-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +12,40 @@
     <link rel ="stylesheet" href="./frontend/css/style.css">
     <script src="./frontend/js/script.js"></script>
 </head>
-<body>
+<body><header> 
     <div class ="navbar">
-        <a href="index.html">HOME</a>
-        <a href="Browse.html">BROWSE</a>
-        <a href="registration.html">REGISTRATION</a>
-        <a href="search.html">SEARCH</a>
-        <a href="login.html">LOGIN</a>
-    </div>
+    <a href="index.html">HOME</a>
+    <a href="Browse.html">BROWSE</a>
+    <a href="registration.html">REGISTRATION</a>
+    <a href="search.html">SEARCH</a>
+    <a href="login.html">LOGIN</a>
+</div>
+</header>
+<main>
+   <fieldset><!--Helps in grouping all the elements together-->
+    <legend>CREATE ACCOUNT</legend><!--Legend helps to create a title for the form-->
+        <label for="email">Email: </label><!--This creates the names-->
+        <input type="email" id="email" name="email"><br><!--This creates the text box, Note we are not adding reuired in html, we need to do this in javascript-->
+
+        <label for="username">Username: </label>
+        <input type="Username" id ="username" name="usernmame"><br>
+
+        <label for="password">Password: </label>
+        <input type="password" id ="password" name="password"><br>
+
+        <label for="retypepassword">Retype-Password: </label>
+        <input type="retypepassword" id ="retypepassword" name="retypepassword"><br>
+
+        <label for="termsandcondiitons">Terms and Conditions: </label>
+        <input type="checkbox" id ="termsandcondiitons" name="termsandcondiitons"><br>
+
+        <button>Sign-UP</button>
+        <button>Reset</button>
+
+   </fieldset>
+
+</main>
+   
 
    
     
