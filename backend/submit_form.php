@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     include 'db_connect.php';
     // SQL query to insert data into the users table
-    $sql = "INSERT INTO users (email, username, password) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO users (email, username, password) VALUES ($email, $username, $password)";
 
     // Prepare and bind
     $stmt = $conn->prepare($sql);
