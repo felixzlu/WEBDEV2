@@ -6,7 +6,7 @@ FLUSH PRIVILEGES;
 USE online_library;
 
 CREATE TABLE books (
-	id INT NOT NULL,
+	id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(255) NOT NULL,
     author VARCHAR(255) NOT NULL,
     year YEAR NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE books (
 );
 
 CREATE TABLE users (
-	id INT NOT NULL,
+	id INT AUTO_INCREMENT NOT NULL,
     username VARCHAR(30) NOT NULL,
     password VARCHAR(30) NOT NULL,
     email VARCHAR(255) NOT NULL,
