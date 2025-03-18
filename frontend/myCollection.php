@@ -14,16 +14,7 @@
     <script src="./css/style.css"></script>
 </head>
 <body>
-    <header>
-<div class ="navbar">
-        <a href="home.php">HOME</a>
-        <a href="Browse.php">BROWSE</a>
-        <a href="registration.php">MY REGISTRATION</a>
-        <a href="search.php">SEARCH</a>
-        <A href="myCollection.php">MY COLLECTION</A>
-        <a href="login.php">LOGIN</a>
-    </div>
-</header>
+<?php include ("header.php") ?>
 <main>
     <div class = "My-Collection">
         <div class="book-title">
@@ -85,13 +76,7 @@
 </main>
    
   <!--This contains information about the privacy statements and Site map-->
-  <footer>
-    <ul>
-    <li>Privacy statements</li>
-    <li>Site map</li><!--Shows all the links to student library-->
-    </ul>
-    
-</footer> 
+  <?php include ("footer.php") ?>
     
 </body>
 </html>
