@@ -8,6 +8,7 @@
     <script src="./js/script.js"></script>
 </head>
 <body>
+    <header>
 <div class ="navbar">
         <a href="home.php">HOME</a>
         <a href="Browse.php">BROWSE</a>
