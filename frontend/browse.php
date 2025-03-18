@@ -20,6 +20,7 @@
     </header>
 <main>
     <!--Wrapper for all sections-->
+    <img src="./Images_for_library/"
     <div class ="browse-container">
         <!--Wrapper for new additions section-->
     <div class = "Browse">
