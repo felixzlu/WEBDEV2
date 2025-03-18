@@ -10,12 +10,12 @@
 <body>
     <header>
     <div class ="navbar">
-        <a href="home.html">HOME</a>
-        <a href="browse.html">BROWSE</a>
-        <a href="registration.html">REGISTRATION</a>
-        <a href="search.html">SEARCH</a>
-        <A href="myCollection.html">MY COLLECTION</A>
-        <a href="login.html">LOGIN</a>
+        <a href="home.php">HOME</a>
+        <a href="Browse.php">BROWSE</a>
+        <a href="registration.php">MY REGISTRATION</a>
+        <a href="search.php">SEARCH</a>
+        <A href="myCollection.php">MY COLLECTION</A>
+        <a href="login.php">LOGIN</a>
     </div>
     </header>
 <main>
