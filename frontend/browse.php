@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Browse</title>
-        <link rel ="stylesheet" href="./css/style.css">
+        <link rel ="stylesheet" href= "./Images_for_library/Browse.jpg">
         <script src="./js/script.js"></script>
     </head>
     <body>
         <?php include ("header.php") ?>
         <main>
-        <img src="./Images_for_library/Browse.jpg">
+        <img src="./Images_for_library/Browse.jpg" alt = "BrowseImage>
 
             <!--Wrapper for all sections-->
             <div class ="browse-container">
@@ -20,7 +20,7 @@
                         <div class ="book">
                         <img src="./" alt="Book1" >
                         <div class="book-info">
-                            <p class ="Book-Title">Book1</ps>
+                            <p class ="Book-Title">Book1</p>
                             <p class ="Description">Description of the book</p>
                         </div>  
                     </div>

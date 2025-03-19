@@ -16,6 +16,7 @@
         <a href="search.php">SEARCH</a>
         <A href="myCollection.php">MY COLLECTION</A>
         <a href="login.php">LOGIN</a>
+</div>
 </header>
 <main>
 <!---Image source-->
@@ -37,7 +38,8 @@
     <option value="comedy">Comedy</option>
     <option value="horror">Horror</option>
 </select><br><br>
-<button tye="Submit">Search</button>
+<button type="Submit">Search</button>
+<button type="reset">Reset</button>
 </fieldset>
 </main>
    
