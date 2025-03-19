@@ -11,11 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse</title>
     <link rel ="stylesheet" href="./css/style.css">
-    <script src="./css/style.css"></script>
+    <script src= "./js/script.js"></script>
 </head>
 <body>
 <?php include ("header.php") ?>
 <main>
+    <img src="./Images_for_library/Mycollection.jpg">
     <div class = "My-Collection">
         <div class="book-title">
             <img src="./" alt="Book1" >

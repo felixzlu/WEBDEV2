@@ -17,7 +17,7 @@
         <A href="myCollection.php">MY COLLECTION</A>
         <a href="login.php">LOGIN</a>
 <main>
-    
+    <img src="./Images_for_library/search.jpg">
 </main>
    
     <!--This contains information about the privacy statements and Site map-->

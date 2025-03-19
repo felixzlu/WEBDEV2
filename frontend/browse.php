@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Browse</title>
         <link rel ="stylesheet" href="./css/style.css">
-        <script src="./css/style.css"></script>
+        <script src="./js/script.js"></script>
     </head>
     <body>
         <?php include ("header.php") ?>
+        <img src="./Images_for_library/Browse.jpg">
         <main>
             <!--Wrapper for all sections-->
             <div class ="browse-container">

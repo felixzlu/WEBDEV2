@@ -10,7 +10,7 @@
 
         <main>
         <!--This is the source for the image-->
-        <img src ="./Images_for_library/Library_home.jpg">
+        <img src="./Images_for_library/home.jpg">
         <p>
             <h2><strong>Welcome to the Student library</strong></h2>
             Our library is a free resource for all students, offering a vast collection of books 

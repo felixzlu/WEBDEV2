@@ -25,7 +25,7 @@
 </header>
 <main>
     <!--This is the source for the image-->
-    <img src ="./Images for library/Home_image.jpeg">
+    <img src ="./Images_for_library/home.jpg">
     <p><h2><strong>Welcome to the Student library</strong></h2>
         Our library is a free resource for all students, offering a vast collection of books across various genres, including fiction,
         non-fiction, science, history, technology, and more. Whether you're looking for academic materials, research resources, 

@@ -1,0 +1,1 @@
+console.log("Javacsript is linkedd successfully");

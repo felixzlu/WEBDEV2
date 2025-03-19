@@ -12,6 +12,7 @@
 <?php include ("header.php") ?>
 <main>
     <!--Code for the login page-->
+    <img src="./Images_for_library/logi.jpg">
     <div class="login-container">
         <h2>Login</h2>
         <form action ="/WEBDEV2/" method ="post">
