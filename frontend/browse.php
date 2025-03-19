@@ -9,8 +9,9 @@
     </head>
     <body>
         <?php include ("header.php") ?>
-        <img src="./Images_for_library/Browse.jpg">
         <main>
+        <img src="./Images_for_library/Browse.jpg">
+
             <!--Wrapper for all sections-->
             <div class ="browse-container">
                 <!--Wrapper for new additions section-->

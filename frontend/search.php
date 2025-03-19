@@ -16,8 +16,29 @@
         <a href="search.php">SEARCH</a>
         <A href="myCollection.php">MY COLLECTION</A>
         <a href="login.php">LOGIN</a>
+</header>
 <main>
+<!---Image source-->
     <img src="./Images_for_library/search.jpg">
+<fieldset>
+    <legend>Advanced Search</legend>
+    <label for ="title">Title: </label>
+    <input type="title" id="title" name="title"><br>
+
+    <label for="author">Author:</label>
+    <input type="author" id="author" name="author"><br>
+
+    <!--This gives the drop down menu optons -->
+    <label for="Genre">Genre: </label>
+    <select id="genre" name="genre">
+    <option value="Science-Fiction">Science Fiction</option>
+    <option value="non-fiction">Non Fiction</option>
+    <option value="romance">Romance</option>
+    <option value="comedy">Comedy</option>
+    <option value="horror">Horror</option>
+</select><br><br>
+<button tye="Submit">Search</button>
+</fieldset>
 </main>
    
     <!--This contains information about the privacy statements and Site map-->
