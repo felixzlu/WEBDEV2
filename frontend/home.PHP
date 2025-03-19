@@ -31,7 +31,8 @@
         non-fiction, science, history, technology, and more. Whether you're looking for academic materials, research resources, 
         or just a good book to read, you'll find it here!Students are welcome to borrow books, study in a quiet environment, 
         and collaborate with peers. Our mission is to support learning and knowledge-sharing, creating a space where everyone can thrive.
-    <h3>Please register to use our services by clicking on the registration form or use the login if you are already registered, we really would love to have you as our customer </h3></p>
+</p>
+    <h3>Please register to use our services by clicking on the registration form or use the login if you are already registered, we really would love to have you as our customer </h3>
 </main>
 <!--This contains information about the privacy statements and Site map-->
     <footer>
