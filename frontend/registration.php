@@ -16,14 +16,14 @@
         <?php include ("header.php") ?>
         <main>
             <img src="./Images_for_library/Registration.jpg">
-            <form action="../backend/submit_form.php" method="POST">
+            <form action="./registration2.php" method="POST">
                 <fieldset><!--Helps in grouping all the elements together-->
                 <legend>CREATE ACCOUNT</legend><!--Legend helps to create a title for the form-->
                     <label for="email">Email: </label><!--This creates the names-->
                     <input type="email" id="email" name="email"><br><!--This creates the text box, Note we are not adding reuired in html, we need to do this in javascript-->
 
                     <label for="username">Username: </label>
-                    <input type="text" id ="username" name="usernmame"><br>
+                    <input type="text" id ="username" name="username"><br>
 
                     <label for="password">Password: </label>
                     <input type="password" id ="password" name="password"><br>
