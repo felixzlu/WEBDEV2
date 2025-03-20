@@ -13,6 +13,7 @@
         <a href="registration.php">REGISTRATION</a>
         <a href="search.php">SEARCH</a>
         <a href="myCollection.php">MY COLLECTION</a>
+        <a href="addBooks.php">ADD BOOKS</a>
         <a href="login.php">LOGIN</a>
     </nav>
 </header>

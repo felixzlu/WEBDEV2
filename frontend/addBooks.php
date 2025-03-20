@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>addBooks</title>
-    <link rel ="stylesheet" href="./css/style.css">
-    <script src="./frontend/js/script.js"></script>
-</head>
-<body>
-    <fieldset>
-        <legend>Books</legend><!--This code forms the title-->
-        <label for ="addbooks">Add Books</label><!----Add books-->
-        <Input type ="addbooks" id="addbooks" name="addbooks"><br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addBooks</title>
+        <link rel ="stylesheet" href="./css/style.css">
+        <script src="./frontend/js/script.js"></script>
+    </head>
+    <body>
+        <?php include ("header.php") ?>
+        <form action="./addBook2.php" method="POST">
+            <fieldset><!--Helps in grouping all the elements together-->
+                <legend>ADD BOOK TO DATABASE</legend><!--Legend helps to create a title for the form-->
+                <label for="title">Title: </label><!--This creates the names-->
+                <input type="text" id="title" name="title"><br><!--This creates the text box, Note we are not adding reuired in html, we need to do this in javascript-->
 
-        <legend>Books</legend>
-        <label for ="displayBooks">Display Books</label>
-        <Input type ="displayBooks" id="displayBooks" name="displayBooks"><br>
+                <label for="author">Author: </label>
+                <input type="text" id ="author" name="author"><br>
 
-        <legend>Books</legend>
-        <label for ="removeBooks">Remove Books</label>
-        <Input type ="removeBooks" id="removeBooks" name="removeBooks"><br>
-        </fieldset>
-    
-</body>
+                <label for="year">Year: </label>
+                <input type="text" id ="year" name="year"><br>
+
+                <label for="genre">Genre: </label>
+                <input type="text" id ="genre" name="genre"><br>
+
+                <label for="description">Description: </label>
+                <textarea rows="4" cols="50" id="description" name="description"></textarea>
+
+                <input type="submit" value="Sign-up">
+                <input type="reset">
+
+            </fieldset>
+        </form>
+        <?php include ("footer.php") ?>
+    </body>
 </html>
