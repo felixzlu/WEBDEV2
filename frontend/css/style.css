@@ -1,58 +1,87 @@
-/* General styles */
+
+/*General styles*/
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Sans-serif;
+    margin:0;
+    padding:0;
     background-color: rgb(227, 195, 174);
 }
-
-/* Container for the background */
-.background-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-   /** background-image: url("./"); /* Change this per page */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(8px); /* Background blur */
-    z-index: -1; /* Push behind content */
-}
-
-/* Image in the foreground */
-img {
-    max-width: 25%; /* Scale image down to 1/4th */
-    height: auto;
+/*This styles the image of each page*/
+img{
+    max-width: 25%;
+    height:auto;
     display: block;
-    margin: 0 auto; /* Center the image */
-}
+    margin:0 auto;/*Center the image*/
 
-/* Content (forms, text) */
-.content {
-    position: relative;
+}
+/*This styles the nav bar at the top of the page*/
+.navbar {
+    background-color: #333;
+    padding: 15px;
     text-align: center;
-    z-index: 1;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3); /* Light transparency */
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    max-width: 400px;
-    margin: 50px auto;
+}
+.navbar a {
+    color:white;
+    text-decoration: none;
+    display: inline-block;
+    padding:10px 20px;
+    
+}
+.navbar a:hover{
+    background-color: aquamarine;
+    border-radius: 5px;
+
 }
 
-/* Form styles */
+/*This styles the browse page*/
+.browse-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.Browse {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba (0, 0, 0, 0.1);
+}
+/*This styles the book images*/
+.book{
+    display:flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+.book img {
+    width:80 px;
+    height: 100px;
+    object-fit: cover;
+}
+.book-info {
+    max-width: 70%;
+}
+
+.Book-Title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Description {
+    font-size: 14px;
+    color: #555;
+}
+
+/* This styles the Forms */
 form {
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
     padding: 20px;
     max-width: 400px;
-    margin: auto;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Input fields */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -64,7 +93,6 @@ select {
     border-radius: 5px;
 }
 
-/* Buttons */
 input[type="submit"],
 button {
     background-color: #333;
@@ -81,3 +109,26 @@ input[type="submit"]:hover,
 button:hover {
     background-color: #575757;
 }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline;
+    padding: 0 10px;
+}
+
+
