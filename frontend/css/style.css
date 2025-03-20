@@ -8,10 +8,10 @@ body {
 }
 /*This styles the image of each page*/
 img{
-    max-width: 100%;
+    max-width: 25%;
     height:auto;
     display: block;
-    margin:0 auto;
+    margin:0 auto;/*Center the image*/
 
 }
 /*This styles the nav bar at the top of the page*/
