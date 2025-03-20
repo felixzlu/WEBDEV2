@@ -13,7 +13,7 @@
         $sql = "INSERT INTO users (username,password,email) VALUES ('$username','$password','$email')";
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
-        header("Location: registrationConfirmation.php");
+        header("Location: registrationConfirmation.php?username=$username");
     }
 
 ?>

@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
     <?php include ("header.php") ?>
-    Welcome. You have successfully signed up.
+    <?php $username = $_GET['username'];?>
+    Welcome <?php echo $username?>. You have successfully registered.
     <?php include ("footer.php") ?>
 </body>
 </html>
