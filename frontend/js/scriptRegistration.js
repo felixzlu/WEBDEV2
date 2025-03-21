@@ -51,7 +51,7 @@ function validate(){
 
     return flag;
 }
-
+console.log("asdf");
 document.getElementById("email").addEventListener("input", function(){
 
     let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -59,9 +59,11 @@ document.getElementById("email").addEventListener("input", function(){
     let inputEmail = document.getElementById("email").value;
 
     if (regexEmail.test(inputEmail)) {
+        console.log("pass");
         errorEmail.innerHTML = "";
         document.getElementById("email").style.borderColor = "unset";
     } else {
+        console.log("fail");
         errorEmail.innerHTML = "<p style='color: red;'>&#x274C Email address should be non-empty with the format xyz@xyz.xyz</p>";
         document.getElementById("email").style.borderColor = "red";
     }

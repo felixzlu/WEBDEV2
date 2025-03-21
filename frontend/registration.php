@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registration</title>
         <link rel ="stylesheet" href="./css/style.css">
-        <script src="./js/scriptRegistration.js"></script>
+        <script src="./js/scriptRegistration.js" defer></script>
     </head>
     <body>
         <?php include ("header.php") ?>
@@ -44,7 +44,6 @@
                 </fieldset>
             </form>
         </main>
-        <!--This contains information about the privacy statements and Site map-->
         <?php include ("footer.php") ?>
     </body>
 </html>
