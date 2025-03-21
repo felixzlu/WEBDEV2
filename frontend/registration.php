@@ -15,7 +15,6 @@
     <body>
         <?php include ("header.php") ?>
         <main>
-            <img src="./Images_for_library/Registration.jpg">
             <form action="./registration2.php" method="POST">
                 <fieldset><!--Helps in grouping all the elements together-->
                 <legend>CREATE ACCOUNT</legend><!--Legend helps to create a title for the form-->

@@ -10,8 +10,8 @@ CREATE TABLE books (
     title VARCHAR(255) NOT NULL,
     author VARCHAR(255) NOT NULL,
     year YEAR NOT NULL,
-    genre VARCHAR(100) NOT NULL,
-    description VARCHAR(100) NOT NULL,
+    genre VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
     CONSTRAINT pk_books PRIMARY KEY (id)
 );
 
@@ -34,8 +34,22 @@ CREATE TABLE reviews (
 	users_id INT NOT NULL,
     books_id INT NOT NULL,
     star_rating INT NOT NULL,
-    review_comment VARCHAR(300) NOT NULL,
+    review_comment VARCHAR(255) NOT NULL,
     date_and_time DATETIME NOT NULL,
     CONSTRAINT fk_reviews_users FOREIGN KEY (users_id) REFERENCES users (id),
     CONSTRAINT fk_reviews_books FOREIGN KEY (books_id) REFERENCES books (id)
 );
+
+INSERT INTO users (username,password,email)
+VALUES 
+('felix','pass2','felix@algonquin.com'),
+('aravind','pass3','aravind@gmail.com'),
+('anas','pass8','anas@hotmail.com');
+
+INSERT INTO books (title,author,year,genre,description) 
+VALUES
+('Harry Potter and the Philisophers Stone','J. K. Rowling','1997','fantasy','Harry is a young wizard who discovers his magical heritage'),
+('Harry Potter and the Chamber of Secrets','J. K. Rowling','1998','fantasy','Harrys second year at Hogwarts School of Witchcraft and Wizardry'),
+('Pride and Prejudice','Jane Austen','1813','romance','The romantic misadventures of Elizabeth Bennet and Mr. Darcy'),
+('Treasure Island','Robert Louis Stevenson','1883','adventure','The story of young Jim Hawkins search for buried treasure'),
+('A Brief History of Time','Stephen Hawking','1988','science','A work that explores the origins and structure of the universe');

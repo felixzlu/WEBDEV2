@@ -10,8 +10,6 @@
     <body>
         <?php include ("header.php") ?>
         <main>
-        <img src="./Images_for_library/Browse.jpg" alt = "BrowseImage>
-
             <!--Wrapper for all sections-->
             <div class ="browse-container">
                 <!--Wrapper for new additions section-->

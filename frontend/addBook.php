@@ -13,7 +13,7 @@
             <fieldset><!--Helps in grouping all the elements together-->
                 <legend>ADD BOOK TO DATABASE</legend><!--Legend helps to create a title for the form-->
                 <label for="title">Title: </label><!--This creates the names-->
-                <input type="text" id="title" name="title"><br><!--This creates the text box, Note we are not adding reuired in html, we need to do this in javascript-->
+                <input type="text" id="title" name="title"><br>
 
                 <label for="author">Author: </label>
                 <input type="text" id ="author" name="author"><br>
@@ -27,7 +27,7 @@
                 <label for="description">Description: </label>
                 <textarea rows="4" cols="50" id="description" name="description"></textarea>
 
-                <input type="submit" value="Sign-up">
+                <input type="submit" value="Submit">
                 <input type="reset">
 
             </fieldset>

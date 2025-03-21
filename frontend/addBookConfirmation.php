@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
-    <title>Confirmation of Registration</title>
+    <title>Confirmation: Book Added</title>
 </head>
 <body>
     <?php include ("header.php") ?>
-    <?php $username = $_GET['username'];?>
-    Welcome <?php echo $username?>. You have successfully registered.
+    <?php $title = $_GET['title'];?>
+    <?php echo $title?> was successfully added to the database.
     <?php include ("footer.php") ?>
 </body>
 </html>

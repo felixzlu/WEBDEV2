@@ -4,7 +4,6 @@
     require_once('../backend/database.php');
     $db = db_connect();
 
-    // Handle form values sent by new.php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $username = $_POST['username'];
         $password = $_POST['password'];

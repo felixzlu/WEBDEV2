@@ -16,7 +16,6 @@
 <body>
 <?php include ("header.php") ?>
 <main>
-    <img src="./Images_for_library/Mycollection.jpg">
     <div class = "My-Collection">
         <div class="book-title">
             <img src="./" alt="Book1" >
