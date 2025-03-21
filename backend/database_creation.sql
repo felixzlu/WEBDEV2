@@ -9,7 +9,7 @@ CREATE TABLE books (
 	id INT AUTO_INCREMENT NOT NULL,
     title VARCHAR(255) NOT NULL,
     author VARCHAR(255) NOT NULL,
-    year YEAR NOT NULL,
+    year VARCHAR(4) NOT NULL,
     genre VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
     CONSTRAINT pk_books PRIMARY KEY (id)

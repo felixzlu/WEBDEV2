@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registration</title>
         <link rel ="stylesheet" href="./css/style.css">
-        <script src="./frontend/js/script.js"></script>
+        <script src="./js/script.js"></script>
     </head>
     <body>
         <?php include ("header.php") ?>
@@ -19,7 +19,7 @@
                 <fieldset><!--Helps in grouping all the elements together-->
                 <legend>CREATE ACCOUNT</legend><!--Legend helps to create a title for the form-->
                     <label for="email">Email: </label><!--This creates the names-->
-                    <input type="email" id="email" name="email"><br><!--This creates the text box, Note we are not adding reuired in html, we need to do this in javascript-->
+                    <input type="text" id="email" name="email"><br><!--This creates the text box, Note we are not adding reuired in html, we need to do this in javascript-->
                     <div id="erroremail"></div>
 
                     <label for="username">Username: </label>
