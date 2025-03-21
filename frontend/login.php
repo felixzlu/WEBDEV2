@@ -14,7 +14,7 @@
     <!--Code for the login page-->
     <div class="login-container">
         <h2>Login</h2>
-        <form action ="/WEBDEV2/" method ="post">
+        <form action ="../backend/login2.php" method ="POST">
             <div class ="input-group">
                 <label for ="username">Username: </label>
                 <input type="text" id="username" name ="username"><!--We use javascript for the required-->

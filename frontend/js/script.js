@@ -1,1 +1,1 @@
-console.log("Javacsript is linkedd successfully");
+console.log("Javascript is linked successfully");
