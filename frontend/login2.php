@@ -8,19 +8,15 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        $sql = "SELECT password from users WHERE username LIKE '$username'";
+        $sql = "SELECT id, password from users WHERE username LIKE '$username'";
         $result = mysqli_query($db, $sql);
         confirm_result_set($result);
         
         $row = mysqli_fetch_assoc($result);
         if($row['password'] == $password){
             session_start();
-            $_SESSION['username'] = $username;
+            $_SESSION['id'] = $row['id'];
         }
-
-        
     }
 
 ?>
-
-take id instead of username
