@@ -53,11 +53,7 @@ img{
     margin-bottom: 15px;
 
 }
-.book img {
-    width:80 px;
-    height: 100px;
-    object-fit: cover;
-}
+
 .book-info {
     max-width: 70%;
 }
