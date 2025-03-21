@@ -16,7 +16,11 @@
         if($row['password'] == $password){
             session_start();
             $_SESSION['id'] = $row['id'];
+            header("Location: loginConfirmation.php?username=$username");
+        }else{
+            header("Location: loginFail.php");
         }
+        
     }
 
 ?>

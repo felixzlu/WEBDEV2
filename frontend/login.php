@@ -14,7 +14,8 @@
     <!--Code for the login page-->
     <div class="login-container">
         <h2>Login</h2>
-        <form action ="../backend/login2.php" method ="POST">
+        <p>Dont have an account?No problem, please <a href="./registration.html">Sign-UP</a></p>
+        <form action ="./login2.php" method ="POST">
             <div class ="input-group">
                 <label for ="username">Username: </label>
                 <input type="text" id="username" name ="username"><!--We use javascript for the required-->
@@ -26,12 +27,9 @@
             <div class="input-group">
                 <input type ="submit" value="Login">
             </div>
-            <div class="input-group">
-                <input type="submit" value="ForgotPassword">
-            </div>
             <!--This is for the footer in the main-->
             <div class ="footer">
-                <p>Dont have an account?No problem, please <a href="./registration.html">Sign-UP</a></p>
+                
             </div>
         </form>
     </div>
