@@ -26,16 +26,13 @@
             <td><?php echo $result['id']; ?></td>
             <td><?php echo $result['title']; ?></td>
             <td><?php echo $result['author'] ; ?></td>
-    	    <td><?php echo $result['year']; ?></td>
+            <td><?php echo $result['year']; ?></td>
             <td><?php echo $result['genre']; ?></td>
             <td><?php echo $result['description']; ?></td>
-    	</tr>
+        </tr>
         <?php } ?>
         </table>
-        
-        
-        
-        
+
         <?php include ("footer.php") ?>
     </body>
 </html>

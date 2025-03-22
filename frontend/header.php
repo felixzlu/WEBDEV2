@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <header>
     <nav class ="navbar">
         <a href="index.php">HOME</a>
@@ -6,7 +10,13 @@
         <a href="search.php">SEARCH</a>
         <a href="myCollection.php">MY COLLECTION</a>
         <a href="list.php">BOOK LIST</a>
+
+        <?php if(isset($_SESSION['id'])){ ?>
+        <a href="logout.php">LOGOUT</a>
+        <?php } else { ?>
         <a href="login.php">LOGIN</a>
+        <?php } ?>
+
     </nav>
 </header>
 
