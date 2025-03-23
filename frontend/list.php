@@ -27,7 +27,6 @@
             <td>author</td>
             <td>year</td>
             <td>genre</td>
-            <td>description</td>
             <td>&nbsp</td>
             <td>&nbsp</td>
         <?php while($result = mysqli_fetch_assoc($result_set)) { ?>
@@ -37,9 +36,8 @@
             <td><?php echo $result['author'] ; ?></td>
             <td><?php echo $result['year']; ?></td>
             <td><?php echo $result['genre']; ?></td>
-            <td><?php echo $result['description']; ?></td>
-            <td><a href="<?php echo"view.php?id=" . $results['id']; ?>">View</a></td>
-            <td><a href="<?php echo"delete.php?id=" . $results['id']; ?>">Delete</a></td>
+            <td><a href="view.php?id=<?php echo $result['id']; ?>">View</a></td>
+            <td><a href="delete.php">Delete</a></td>
         </tr>
         <?php } ?>
         </table>
