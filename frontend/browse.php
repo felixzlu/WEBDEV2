@@ -8,7 +8,9 @@
         <script src="./js/script.js"></script>
     </head>
     <body>
+        <header>
         <?php include ("header.php") ?>
+        </header>
         <main>
             <!--Wrapper for all sections-->
             <div class ="browse-container">
