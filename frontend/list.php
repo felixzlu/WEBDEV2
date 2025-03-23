@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="./css/style.css">
-        <script src="./js/script.js"></script>
+        <script src="./js/scriptDelete.js"></script>
         <title>Book List</title>
     </head>
     <body>
@@ -37,7 +37,7 @@
             <td><?php echo $result['year']; ?></td>
             <td><?php echo $result['genre']; ?></td>
             <td><a href="view.php?id=<?php echo $result['id']; ?>">View</a></td>
-            <td><a href="delete.php">Delete</a></td>
+            <td><a href="delete.php?id=<?php echo $result['id']; ?>" onclick="return confirmDelete();">Delete</a></td>
         </tr>
         <?php } ?>
         </table>
