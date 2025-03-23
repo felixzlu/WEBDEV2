@@ -35,7 +35,7 @@ CREATE TABLE reviews (
     books_id INT NOT NULL,
     star_rating INT NOT NULL,
     review_comment VARCHAR(255) NOT NULL,
-    date_and_time DATETIME NOT NULL,
+    date_and_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_reviews_users FOREIGN KEY (users_id) REFERENCES users (id),
     CONSTRAINT fk_reviews_books FOREIGN KEY (books_id) REFERENCES books (id)
 );

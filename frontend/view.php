@@ -25,6 +25,7 @@
     <p>Year: <?php echo $result['year']; ?></p>
     <p>Genre: <?php echo $result['genre']; ?></p>
     <p>Description: <?php echo $result['description']; ?></p>
+    <a href="addReview.php?bookid=<?php echo $id; ?>">Write a review</a>
     <?php include ("footer.php") ?>
 </body>
 </html>
