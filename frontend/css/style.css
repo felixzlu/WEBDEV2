@@ -6,14 +6,7 @@ body {
     padding:0;
     background-color: rgb(227, 195, 174);
 }
-/*This styles the image of each page*/
-img{
-    max-width: 25%;
-    height:auto;
-    display: block;
-    margin:0 auto;/*Center the image*/
 
-}
 /*This styles the nav bar at the top of the page*/
 .navbar {
     background-color: #333;
