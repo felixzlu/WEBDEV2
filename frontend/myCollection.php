@@ -14,69 +14,71 @@
     <script src= "./js/script.js"></script>
 </head>
 <body>
-<?php include ("header.php") ?>
+<header><?php include ("header.php") ?>
+</header>
 <main>
-    <div class = "My-Collection">
-        <div class="book-title">
-            <img src="./" alt="Book1" >
-            <div class="book-info">
-                <h3 class ="Book-Title">Book Title</h3>
-                <p class ="date-added">Date Added: 2025-03-16</p>
-                <p class="rating">Rating: ******</p>
-        </div>
-    </div>
-
-    <div class="book-title">
-        <img src="./" alt="Book2" >
-        <div class="book-info">
-            <h3 class ="Book-Title">Second Book</h3>
-            <p class ="date-added">Date Added: 2025-03-16</p>
-            <p class="rating">Rating: ******</p>
-    </div>
-</div>
-
-<div class="book-title">
-    <img src="./" alt="Book3" >
-    <div class="book-info">
-        <h3 class ="Book-Title">Third Book</h3>
-        <p class ="date-added">Date Added: 2025-03-16</p>
-        <p class="rating">Rating: ******</p>
-</div>
-</div>
-
-<div class="book-title">
-    <img src="./" alt="Book3" >
-    <div class="book-info">
-        <h3 class ="Book-Title">Fourth Book</h3>
-        <p class ="date-added">Date Added: 2025-03-16</p>
-        <p class="rating">Rating: ******</p>
-</div>
-</div>
-
-<div class="book-title">
-    <img src="./" alt="Book3" >
-    <div class="book-info">
-        <h3 class ="Book-Title">Fifth Book</h3>
-        <p class ="date-added">Date Added: 2025-03-16</p>
-        <p class="rating">Rating: ******</p>
-</div>
-</div>
-
-<div class="book-title">
-    <img src="./" alt="Book3" >
-    <div class="book-info">
-        <h3 class ="Book-Title">Sixth Book</h3>
-        <p class ="date-added">Date Added: 2025-03-16</p>
-        <p class="rating">Rating: ******</p>
-</div>
-</div>
-
-</div>
-
-</main>
+    <div class="container">
+        <h2>Library Book List</h2>
+        <table>
+            <thead><!---This designs the columns for the table-->
+<tr>
+    <th>#</th>
+    <th>Book Title</th>
+    <th>Author</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>Rating</th>
+    </tr>
+        </thead>
+        <tbody>
+            <tr><!----This is the table row for each book-->
+                <td>1</td>
+                <td>Harry Potter and the Philosophers Stone </td>
+                <td>J.K.ROwling</td>
+                <td>Fantasy</td>
+                <td>1997</td>
+                <td>******</td><!--Note, the rating we can add or remove it-->
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Harry Potter and the Chamber of Secrets </td>
+                <td>J.K.ROwling</td>
+                <td>Fantasy</td>
+                <td>1998</td>
+                <td>******</td><!--Note, the rating we can add or remove it-->
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Pride and Prejudice </td>
+                <td>Jane Austen</td>
+                <td>Romance</td>
+                <td>1813</td>
+                <td>******</td><!--Note, the rating we can add or remove it-->
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Treasure island </td>
+                <td>Robert Louis Stevenson</td>
+                <td>Adventure</td>
+                <td>1883</td>
+                <td>******</td><!--Note, the rating we can add or remove it-->
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>A brief history of Time </td>
+                <td>Stephen Hawking</td>
+                <td>Science</td>
+                <td>1988</td>
+                <td>******</td><!--Note, the rating we can add or remove it-->
+            </tr>
+        </tbody>
+    </table>
    
-  <!--This contains information about the privacy statements and Site map-->
-  <?php include ("footer.php") ?>
-    
+    </div>
+</main>
+   <footer>
+<!--This contains information about the privacy statements and Site map-->
+<?php include ("footer.php") ?>
+   </footer>  
 </body>
 </html>
