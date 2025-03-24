@@ -29,6 +29,7 @@
             <td>genre</td>
             <td>&nbsp</td>
             <td>&nbsp</td>
+            <td>&nbsp</td>
         <?php while($result = mysqli_fetch_assoc($result_set)) { ?>
         <tr>
             <td><?php echo $result['id']; ?></td>
@@ -37,6 +38,7 @@
             <td><?php echo $result['year']; ?></td>
             <td><?php echo $result['genre']; ?></td>
             <td><a href="view.php?id=<?php echo $result['id']; ?>">View</a></td>
+            <td><a href="addReview.php?bookid=<?php echo $result['id']; ?>">Write a review</a></td>
             <td><a href="delete.php?id=<?php echo $result['id']; ?>" onclick="return confirmDelete();">Delete</a></td>
         </tr>
         <?php } ?>
