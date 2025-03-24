@@ -15,6 +15,6 @@
     $result = mysqli_query($db, $sql);
     confirm_result_set($result);
 
-    header("Location: addFavoriteConfirmation.php");
+    header("Location: list.php");
 
 ?>

@@ -17,7 +17,14 @@
     ?>
 
         <?php include ("header.php") ?>
+
+        <?php $_SESSION['from'] = 'booklist' ?>
         <main>
+
+        <?php if(!isset($_SESSION['id'])){
+        header("Location: youMustLogin.php");
+        } ?>
+
         <h1>Book List</h1>
         <a href="addBook.php">Add Book to Database</a>
         
@@ -41,7 +48,18 @@
             <td><?php echo $result['genre']; ?></td>
             <td><a href="view.php?id=<?php echo $result['id']; ?>">View</a></td>
             <td><a href="addReview.php?bookid=<?php echo $result['id']; ?>">Write a review</a></td>
-            <td><a href="addFavorite.php?bookid=<?php echo $result['id']; ?>">Add to favorites</a></td>
+
+            <?php 
+                $sql2 = "SELECT * FROM favorites WHERE books_id =".$result['id']." AND users_id=".$_SESSION['id'].";";
+                $result_set2 = mysqli_query($db, $sql2);
+                if(mysqli_num_rows($result_set2)==0){ ?>
+                    <td><a href="addFavorite.php?bookid=<?php echo $result['id']; ?>">Add to favorites</a></td>
+                <?php } else { ?>
+                    <td><a href="deleteFavorite.php?bookid=<?php echo $result['id']; ?>">Delete from favorites</a></td>
+                <?php }      
+            ?>
+
+            
             <td><a href="delete.php?id=<?php echo $result['id']; ?>" onclick="return confirmDelete();">Delete</a></td>
         </tr>
         <?php } ?>

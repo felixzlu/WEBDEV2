@@ -8,5 +8,11 @@
 
     $sql = "DELETE FROM favorites WHERE users_id =".$_SESSION['id']." AND books_id = $bookid";
     mysqli_query($db, $sql);
-    header("Location: myFavorites.php");
+
+
+    if($_SESSION['from']=='favorites'){
+        header("Location: myFavorites.php");
+    } else{
+        header("Location: list.php");
+    }
 ?>

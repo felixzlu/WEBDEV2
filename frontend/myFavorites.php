@@ -15,6 +15,7 @@
 </head>
 <body>
     <?php include ("header.php") ?>
+    <?php $_SESSION['from'] = 'favorites' ?>
     <main>
 
     <?php if(!isset($_SESSION['id'])){
