@@ -7,7 +7,15 @@
     <title>Write a review</title>
 </head>
 <body>
+
     <?php include ("header.php") ?>
+
+    <?php
+        if(!isset($_SESSION['id'])){
+            header("Location: youMustLogin.php");
+        }
+    ?>
+
     <?php 
         $bookid = $_GET['bookid'];
         $_SESSION['bookid'] = $bookid;
