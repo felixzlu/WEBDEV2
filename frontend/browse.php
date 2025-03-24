@@ -20,7 +20,6 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Book Cover</th>
                                     <th>Title</th>
                                     <th>Description</th>
                                 </tr>
