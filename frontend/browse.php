@@ -17,112 +17,106 @@
                 <!--Wrapper for new additions section-->
                 <div class = "Browse">
                     <h2>New Additions</h2>
-                        <div class ="book">
-                        <img src="./" alt="Book1" >
-                        <div class="book-info">
-                            <p class ="Book-Title">Book1</p>
-                            <p class ="Description">Description of the book</p>
-                        </div>  
-                    </div>
-                        <div class ="book">
-                        <img src="./" alt="Book2" >
-                        <div class="book-info">
-                            <p class ="Book-Title">Book2</p>
-                            <p class ="Description">Description of the book</p>
-                        </div>  
-                    </div>
-                <div class ="book">
-                    <img src="./" alt="Book3" >
-                    <div class="book-info">
-                        <p class ="Book-Title">Book3</p>
-                        <p class ="Description">Description of the book</p>
-                    </div>  
-                </div>
-            </div>
-            <!--Wrapper for overall top picks-->
-            <div class="Browse">
-                <h2>Overall Top Picks</h2>
-                    <div class="book">
-                    <img src="" alt ="Book1">
-                    <div class="book-info">
-                        <p class="Book-Title">Book1</p>
-                        <p class="Description">Description of the book</p>
-                    </div>
-                    </div>
-                    <div class="book">
-                        <img src="" alt ="Book1">
-                        <div class="book-info">
-                            <p class="Book-Title">Book1</p>
-                            <p class="Description">Description of the book</p>
-                        </div>
-                        </div>
-                        <div class="book">
-                            <img src="" alt ="Book1">
-                            <div class="book-info">
-                                <p class="Book-Title">Book1</p>
-                                <p class="Description">Description of the book</p>
-                            </div>
-                            </div>
-                </div>
-            
-                    <!--Top Genres Section-->
-                    <div class="Browse">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Book Cover</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Book1</td>
+                                <td>Description of the book</td>
+                                </tr>
+                                <tr>
+                                    <td>Book2</td>
+                                    <td>Description of the book</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Book2</td>
+                                    <td>Description of the book</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2>Overall Top picks</h2>
+                        <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Book1</td>
+                                <td>Description of the book</td>
+                            </tr>
+                            <tr>
+                                <td>Book2</td>
+                                <td>Description of the book</td>
+                            </tr>
+                            <tr>
+                                <td>Book3</td>
+                                <td>Description of the book</td>
+                            </tr>
+                        </tbody>
+                        </table>
                         <h2>Top Genres</h2>
-                        <!--Science fiction-->
-                            <div class="genre">
-                                <h3>Science Fiction</h3>
-                                <div class ="book">
-                            <img src="" alt ="Book1">
-                            <div class="book-info">
-                                <p class="Book-Title">Book1</p>
-                                <p class="Description">Description of the book</p>
-                            </div>
-                            </div>
-                            <div class="book">
-                                <img src="" alt ="Book1">
-                                <div class="book-info">
-                                    <p class="Book-Title">Book1</p>
-                                    <p class="Description">Description of the book</p>
-                                </div>
-                                </div>
-                                <div class="book">
-                                    <img src="" alt ="Book1">
-                                    <div class="book-info">
-                                        <p class="Book-Title">Book1</p>
-                                        <p class="Description">Description of the book</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Romance-->
-                        <div class="genre">
-                            <h3>Romance</h3>
-                            <div class="book">
-                                <img src="" alt="book1">
-                                <div class="book-info">
-                                    <p class="Book-Title">Book2</p>
-                                    <p class="Description">Description of the book</p>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="book">
-                                <img src="" alt="book2">
-                                <div class="book-info">
-                                    <p class="Book-Title">Book2</p>
-                                    <p class="Description">Description of the book</p>
-                                </div>
-                            </div>
-                            <div class="book">
-                                <img src="" alt="book3">
-                                <div class="book-info">
-                                    <p class="Book-Title">Book3</p>
-                                    <p class="Description">Description of the book</p>
-                                </div>
-                            </div>
-                        </div>
+                        <h3>Science Fiction</h3>
+                        <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Book1</td>
+                                <td>Description of the book</td>
+                            </tr>
+                            <tr>
+                                <td>Book2</td>
+                                <td>Description of the book</td>
+                            </tr>
+                            <tr>
+                                <td>Book3</td>
+                                <td>Description of the book</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <h3>Romance</h3>
+                        <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Book1</td>
+                                <td>Description of the book</td>
+                            </tr>
+                            <tr>
+                                <td>Book2</td>
+                                <td>Description of the book</td>
+                            </tr>
+                            <tr>
+                                <td>Book3</td>
+                                <td>Description of the book</td>
+                            </tr>
+                        </tbody>
+                        </table>         
             </div>
         </main>
-
-    <!--This contains information about the privacy statements and Site map-->
-    <?php include ("footer.php") ?>
+<footer> <!--This contains information about the privacy statements and Site map-->
+<?php include ("footer.php") ?>
+</footer>
+   
     </body>
 </html>
