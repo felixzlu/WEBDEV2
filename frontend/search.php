@@ -10,28 +10,45 @@
 <body>
 <?php include ("header.php") ?>
 <main>
-<fieldset>
-    <legend>Advanced Search</legend>
-    <label for ="title">Title: </label>
-    <input type="title" id="title" name="title"><br>
+    <form action="search2.php" method="POST">
+        <label for="title">Search by title:</label>
+        <input type="text" id="title" name="title">
 
-    <label for="author">Author:</label>
-    <input type="author" id="author" name="author"><br>
+        <label for="author">Search by author:</label>
+        <input type="text" id="author" name="author">
 
-    <!--This gives the drop down menu optons -->
-    <label for="Genre">Genre: </label>
-    <select id="genre" name="genre">
-    <option value="Science-Fiction">Science Fiction</option>
-    <option value="non-fiction">Non Fiction</option>
-    <option value="romance">Romance</option>
-    <option value="comedy">Comedy</option>
-    <option value="horror">Horror</option>
-</select><br><br>
-<button type="Submit">Search</button>
-<button type="reset">Reset</button>
-</fieldset>
+        <label for="year">Filter by year:</label>
+        <select id="year" name="year">
+            <option value="any">Any</option>
+            <?php 
+                require_once('../backend/db_credentials.php');
+                require_once('../backend/database.php');
+                $db = db_connect();
+            
+                $sql = "SELECT year FROM books ORDER BY year;";
+                $result_set = mysqli_query($db, $sql);
+
+                while($result=mysqli_fetch_assoc($result_set)){ ?>
+                    <option value="<?php echo $result['year']?>"><?php echo $result['year']?></option>
+                <?php }
+            ?>
+        </select>
+        <label for="genre">Filter by genre:</label>
+        <select id="genre" name="genre">
+            <option value="any">Any</option>
+            <?php 
+                $sql2 = "SELECT DISTINCT genre FROM books ORDER BY genre;";
+                $result_set2 = mysqli_query($db, $sql2);
+
+                while($result2=mysqli_fetch_assoc($result_set2)){ ?>
+                    <option value="<?php echo $result2['genre']?>"><?php echo $result2['genre']?></option>
+                <?php }
+            ?>
+        </select>
+        <input type="submit" value="Search"></input>
+    </form>
 </main>
-   
+
 <?php include ("footer.php") ?>
 </body>
 </html>
