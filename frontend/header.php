@@ -8,7 +8,7 @@ session_start();
         <a href="browse.php">BROWSE</a>
         <a href="registration.php">REGISTRATION</a>
         <a href="search.php">SEARCH</a>
-        <a href="myCollection.php">MY FAVORITES</a>
+        <a href="myFavorites.php">MY FAVORITES</a>
         <a href="list.php">BOOK LIST</a>
 
         <?php if(isset($_SESSION['id'])){ ?>
