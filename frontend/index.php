@@ -11,7 +11,7 @@
         <header>
         <?php include ("header.php") ?>
         </header>
-        <main>
+        <main id ="home-main">
         <h2>Welcome to the Online Library</h2>
         <p>
             Our library is a free resource for all students, offering a collection of books 

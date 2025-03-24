@@ -14,7 +14,7 @@ body {
     height: 100%;
 }
 
-main{
+#home-main{
     max-width: 800px;
     margin:auto;
     padding:20px;
