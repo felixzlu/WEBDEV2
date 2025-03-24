@@ -42,9 +42,8 @@ main{
 
 /*This styles the browse page*/
 .browse-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+    
+    text-align: justify;
 }
 .Browse {
     background: white;
@@ -52,6 +51,25 @@ main{
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba (0, 0, 0, 0.1);
+}
+/*This styles the tables*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+/**This will add the spacing between title and description*/
+th {
+    text-align: lef;
+    padding-bottom: 10px;
+}
+
+td {
+    padding: 15px;
 }
 /*This styles the book images*/
 
