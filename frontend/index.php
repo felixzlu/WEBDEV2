@@ -8,23 +8,26 @@
         <title>Home</title>
     </head>
     <body>
+        <header>
         <?php include ("header.php") ?>
-
+        </header>
         <main>
+        <h2>Welcome to the Online Library</h2>
         <p>
-            <h2>Welcome to the Online Library</h2>
             Our library is a free resource for all students, offering a collection of books 
             across various genres, including fantasy, romance, adventure, science, and more. 
             Whether you're looking for academic materials, research resources, or just a
             good book to read, you'll find it here! Users are welcome to view, add, or delete
-            books. They can also create their own collection of favorite books.
+            books. They can also create their own collection of favorite books.</p>
             <h3>
                 Please <a href="registration.php">register</a> to use our services. if you are 
                 already registered, please <a href="login.php">login</a>.
             </h3>
-        </p>
-        </main>
 
-        <?php include ("footer.php") ?>
+        </main>
+<footer>
+<?php include ("footer.php") ?>
+</footer>
+        
     </body>
 </html>

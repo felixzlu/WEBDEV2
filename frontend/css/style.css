@@ -15,7 +15,11 @@ body {
 }
 
 main{
-    flex: 1;
+    max-width: 800px;
+    margin:auto;
+    padding:20px;
+    text-align: justify;
+    line-height: 1.6;
 }
 
 /*This styles the nav bar at the top of the page*/
