@@ -26,6 +26,31 @@
     <p>Genre: <?php echo $result['genre']; ?></p>
     <p>Description: <?php echo $result['description']; ?></p>
     <a href="addReview.php?bookid=<?php echo $id; ?>">Write a review</a>
+
+
+    <?php 
+        $sql2 = "SELECT * FROM reviews WHERE books_id = $id";
+        $result_set2 = mysqli_query($db, $sql2);
+
+        
+
+        while($result2 = mysqli_fetch_assoc($result_set2)){ ?>
+
+            <?php 
+            $sql3 = "SELECT * FROM users WHERE id =" . $result2['users_id'];
+            $result_set3 = mysqli_query($db, $sql3);
+            $result3 = mysqli_fetch_assoc($result_set3);
+            ?>
+
+
+            <div class="review">
+                <p>User <?php echo $result3['username']; ?> wrote:</p>
+                <p>Rating: <?php echo $result2['star_rating']?> star(s)</p>
+                <p>Comment: <?php echo $result2['review_comment']?></p>
+            </div>
+        <?php }
+    ?>
+
     <?php include ("footer.php") ?>
 </body>
 </html>

@@ -120,4 +120,9 @@ footer li {
     padding: 0 10px;
 }
 
+.review {
+    border: 3px solid black;
+    margin: 6px;
+}
+
 
