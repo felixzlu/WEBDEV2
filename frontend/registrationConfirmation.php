@@ -9,8 +9,10 @@
 </head>
 <body>
     <?php include ("header.php") ?>
+    <main>
     <?php $username = $_GET['username'];?>
     Welcome <?php echo $username?>. You have successfully registered.
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>

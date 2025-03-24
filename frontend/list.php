@@ -17,6 +17,7 @@
     ?>
 
         <?php include ("header.php") ?>
+        <main>
         <h1>Book List</h1>
         <a href="addBook.php">Add Book to Database</a>
         
@@ -45,7 +46,7 @@
         </tr>
         <?php } ?>
         </table>
-
+        </main>
         <?php include ("footer.php") ?>
     </body>
 </html>

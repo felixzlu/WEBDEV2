@@ -8,7 +8,9 @@
 </head>
 <body>
     <?php include ("header.php") ?>
+    <main>
     Successfully added to favorites.
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>

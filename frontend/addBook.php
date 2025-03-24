@@ -9,6 +9,7 @@
     </head>
     <body>
         <?php include ("header.php") ?>
+        <main>
         <form action="./addBook2.php" method="POST" onsubmit="return validate();">
             <fieldset><!--Helps in grouping all the elements together-->
                 <legend>ADD BOOK TO DATABASE</legend><!--Legend helps to create a title for the form-->
@@ -37,6 +38,7 @@
 
             </fieldset>
         </form>
+        </main>
         <?php include ("footer.php") ?>
     </body>
 </html>

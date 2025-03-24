@@ -9,7 +9,9 @@
 </head>
 <body>
     <?php include ("header.php") ?>
+    <main>
     Login failed. Please try again.
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include ("header.php") ?>
-
+    <main>
     <?php
         require_once('../backend/db_credentials.php');
         require_once('../backend/database.php');
@@ -50,7 +50,7 @@
             </div>
         <?php }
     ?>
-
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>

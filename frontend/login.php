@@ -35,9 +35,7 @@
     </div>
     
 </main>
-
-    
-</body>
-<!--This contains information about the privacy statements and Site map-->
 <?php include ("footer.php") ?>
+</body>
+
 </html>

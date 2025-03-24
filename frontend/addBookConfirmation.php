@@ -10,7 +10,9 @@
 <body>
     <?php include ("header.php") ?>
     <?php $title = $_GET['title'];?>
+    <main>
     <?php echo $title?> was successfully added to the database.
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>

@@ -8,7 +8,9 @@
 </head>
 <body>
     <?php include ("header.php") ?>
+    <main>
     Successfully entered review into database.
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>

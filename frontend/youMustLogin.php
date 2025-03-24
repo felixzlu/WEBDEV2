@@ -8,8 +8,9 @@
 </head>
 <body>
     <?php include ("header.php") ?>
+    <main>
     You must login to perform this action.
-
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>

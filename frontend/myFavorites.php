@@ -15,6 +15,7 @@
 </head>
 <body>
     <?php include ("header.php") ?>
+    <main>
 
     <?php if(!isset($_SESSION['id'])){
         header("Location: youMustLogin.php");
@@ -47,7 +48,7 @@
 
 
 
-
+    </main>
     <?php include ("footer.php") ?>
 </body>
 </html>
