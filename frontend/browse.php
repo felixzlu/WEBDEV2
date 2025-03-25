@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Browse</title>
-        <link rel ="stylesheet" href= "./css/style.css">
-        <script src="./js/script.js"></script>
-    </head>
-    <body>
-        <?php
+<?php
         session_start();
         require_once('../backend/db_credentials.php');
         require_once('../backend/database.php');
@@ -25,14 +15,22 @@
         }
         ?>
 
-        <?php include ("header.php") ?>
-        <?php $_SESSION['from']= 'browse' ?>
 
-        <main>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Browse</title>
+        <link rel ="stylesheet" href= "./css/style.css">
+        <script src="./js/script.js"></script>
+    </head>
+    <body>
+        <?php include ("header.php"); ?>
+      <main>
             <!--Wrapper for all sections-->
             <div class ="browse-container">
                 <!--Wrapper for new additions section-->
-                <div class = "Browse">
                     <h2>New Additions</h2>
                         <table>
                             <thead>
@@ -42,6 +40,8 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php while($row=mysqli_fetch_assoc($result_set)) {?>
+                                
                                 <tr>
                                     <td>Book1</td>
                                 <td>Description of the book</td>
@@ -49,13 +49,12 @@
                                 <tr>
                                     <td>Book2</td>
                                     <td>Description of the book</td>
-
                                 </tr>
                                 <tr>
                                     <td>Book2</td>
                                     <td>Description of the book</td>
 
-                                </tr>
+                                </tr>} ?>
                             </tbody>
                         </table>
                         <h2>Overall Top picks</h2>

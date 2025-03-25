@@ -70,3 +70,33 @@ VALUES
 ('The Subtle Art of Not Giving a Fck*','Mark Manson','2016','Self-Help','A counterintuitive guide to living a better life by caring less about what doesnt matter.'),
 ('Steve Jobs','Walter Isaacson','2011','Biography','The authorized biography of the visionary behind Apple Inc.'),
 ('The Shining','Stephen King','1977','Horror','A family in an isolated hotel confronts terrifying supernatural forces.');
+
+/**This will fetch new additons that are added to the database based on the date added**/
+
+SELECT title, description
+FROM books
+ORDER BY date_added DESC
+LIMIT 5;
+
+/**THis will fetch the top picks based on the rating in descending order*/
+
+SELECT title, description
+FROM books
+ORDER BY rating DESC
+LIMIT 5;
+
+/**This will fetch top genres i.e "Science Fiction"& "Romance"*/
+
+SELECT title, description
+FROM books
+WHERE genre = 'Science Fiction'
+ORDER BY rating DESC
+LIMIT 5;
+
+SELECT title, description
+FROM books
+WHERE genre ='Romance'
+ORDER BY RATING DESC
+LIMIT 5;
+
+/**This will fetch books marked as favorite by the current user */
