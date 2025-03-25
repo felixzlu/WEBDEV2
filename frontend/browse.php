@@ -8,9 +8,26 @@
         <script src="./js/script.js"></script>
     </head>
     <body>
-        <header>
+        <?php
+        session_start();
+        require_once('../backend/db_credentials.php');
+        require_once('../backend/database.php');
+        $db = db_connect();
+
+        //This will fetch the books from the database
+        $sql= "SELECT* FROM books";
+        $result_set = mysqli_query($db, $sql);
+
+        //THis will redirect the user if he is not logged in to the login page
+        if (!isset($_SESSION['id'])) {
+            header("Location: youMustLogin.php");
+            exit();
+        }
+        ?>
+
         <?php include ("header.php") ?>
-        </header>
+        <?php $_SESSION['from']= 'browse' ?>
+
         <main>
             <!--Wrapper for all sections-->
             <div class ="browse-container">
