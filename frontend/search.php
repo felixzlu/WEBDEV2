@@ -25,7 +25,7 @@
                 require_once('../backend/database.php');
                 $db = db_connect();
             
-                $sql = "SELECT year FROM books ORDER BY year;";
+                $sql = "SELECT DISTINCT year FROM books ORDER BY year;";
                 $result_set = mysqli_query($db, $sql);
 
                 while($result=mysqli_fetch_assoc($result_set)){ ?>
