@@ -12,6 +12,7 @@ CREATE TABLE books (
     year VARCHAR(4) NOT NULL,
     genre VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
+    date_added DATETIME DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT pk_books PRIMARY KEY (id)
 );
 
