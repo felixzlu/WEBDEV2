@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <link rel ="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
+    <script src="./js/scriptSearch.js" defer></script>
 </head>
 <body>
 <?php include ("header.php") ?>
+<?php
+    if (!isset($_SESSION['id'])) {
+        header("Location: youMustLogin.php");
+    }
+?>
+
 <main>
-    <form action="search2.php" method="POST">
+    <form action="search2.php" method="GET" onsubmit="return validate();">
         <label for="title">Search by title:</label>
         <input type="text" id="title" name="title">
+        <div id="errortitle"></div>
 
         <label for="author">Search by author:</label>
         <input type="text" id="author" name="author">
+        <div id="errorauthor"></div>
 
         <label for="year">Filter by year:</label>
         <select id="year" name="year">
