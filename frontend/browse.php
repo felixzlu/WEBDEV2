@@ -1,19 +1,17 @@
 <?php
-        session_start();
-        require_once('../backend/db_credentials.php');
-        require_once('../backend/database.php');
-        $db = db_connect();
+    require_once('../backend/db_credentials.php');
+    require_once('../backend/database.php');
+    $db = db_connect();
 
-        //This will fetch the books from the database
-        $sql= "SELECT* FROM books";
-        $result_set = mysqli_query($db, $sql);
+    //This will fetch the books from the database
+    $sql= "SELECT * FROM books ORDER BY date_added ASC LIMIT 5";
+    $result_set = mysqli_query($db, $sql); 
 
-        //THis will redirect the user if he is not logged in to the login page
-        if (!isset($_SESSION['id'])) {
-            header("Location: youMustLogin.php");
-            exit();
-        }
-        ?>
+    $sql2 = "SELECT b.title, b.description, AVG(r.star_rating) AS avg_rating FROM books b JOIN reviews r ON b.id = r.books_id GROUP BY b.title, b.description ORDER BY avg_rating DESC LIMIT 5;";
+    $result_set2 = mysqli_query($db,$sql2);
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -27,7 +25,13 @@
     </head>
     <body>
         <?php include ("header.php"); ?>
-      <main>
+        <?php
+        if (!isset($_SESSION['id'])) {
+            header("Location: youMustLogin.php");
+            exit();
+        }
+    ?>
+        <main>
             <!--Wrapper for all sections-->
             <div class ="browse-container">
                 <!--Wrapper for new additions section-->
@@ -43,18 +47,10 @@
                                 <?php while($row=mysqli_fetch_assoc($result_set)) {?>
                                 
                                 <tr>
-                                    <td>Book1</td>
-                                <td>Description of the book</td>
+                                    <td><?php echo $row['title'] ?></td>
+                                    <td><?php echo $row['description'] ?></td>
                                 </tr>
-                                <tr>
-                                    <td>Book2</td>
-                                    <td>Description of the book</td>
-                                </tr>
-                                <tr>
-                                    <td>Book2</td>
-                                    <td>Description of the book</td>
-
-                                </tr>} ?>
+                                </tr><?php } ?>
                             </tbody>
                         </table>
                         <h2>Overall Top picks</h2>
@@ -63,68 +59,17 @@
                             <tr>
                                 <th>Title</th>
                                 <th>Description</th>
+                                <th>Average Star Rating</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php while($row=mysqli_fetch_assoc($result_set2)) {?>
                             <tr>
-                                <td>Book1</td>
-                                <td>Description of the book</td>
+                                <td><?php echo $row['title'] ?></td>
+                                <td><?php echo $row['description'] ?></td>
+                                <td><?php echo $row['avg_rating'] ?></td>
                             </tr>
-                            <tr>
-                                <td>Book2</td>
-                                <td>Description of the book</td>
-                            </tr>
-                            <tr>
-                                <td>Book3</td>
-                                <td>Description of the book</td>
-                            </tr>
-                        </tbody>
-                        </table>
-                        <h2>Top Genres</h2>
-                        <h3>Science Fiction</h3>
-                        <table>
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Book1</td>
-                                <td>Description of the book</td>
-                            </tr>
-                            <tr>
-                                <td>Book2</td>
-                                <td>Description of the book</td>
-                            </tr>
-                            <tr>
-                                <td>Book3</td>
-                                <td>Description of the book</td>
-                            </tr>
-                        </tbody>
-                        </table>
-                        <h3>Romance</h3>
-                        <table>
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Book1</td>
-                                <td>Description of the book</td>
-                            </tr>
-                            <tr>
-                                <td>Book2</td>
-                                <td>Description of the book</td>
-                            </tr>
-                            <tr>
-                                <td>Book3</td>
-                                <td>Description of the book</td>
-                            </tr>
+                            <?php } ?>
                         </tbody>
                         </table>         
             </div>

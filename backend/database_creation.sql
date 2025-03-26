@@ -72,32 +72,14 @@ VALUES
 ('Steve Jobs','Walter Isaacson','2011','Biography','The authorized biography of the visionary behind Apple Inc.'),
 ('The Shining','Stephen King','1977','Horror','A family in an isolated hotel confronts terrifying supernatural forces.');
 
-/**This will fetch new additons that are added to the database based on the date added**/
-
-SELECT title, description
-FROM books
-ORDER BY date_added DESC
-LIMIT 5;
-
-/**THis will fetch the top picks based on the rating in descending order*/
-
-SELECT title, description
-FROM books
-ORDER BY rating DESC
-LIMIT 5;
-
-/**This will fetch top genres i.e "Science Fiction"& "Romance"*/
-
-SELECT title, description
-FROM books
-WHERE genre = 'Science Fiction'
-ORDER BY rating DESC
-LIMIT 5;
-
-SELECT title, description
-FROM books
-WHERE genre ='Romance'
-ORDER BY RATING DESC
-LIMIT 5;
-
-/**This will fetch books marked as favorite by the current user */
+INSERT INTO reviews (users_id,books_id,star_rating,review_comment)
+VALUES
+(1,16,5,'This book is fantastic'),
+(2,16,4,'A great read'),
+(3,16,5,'You will love this book'),
+(1,17,2,'Okay'),
+(2,15,4,'I thoroughly enjoyed this book'),
+(3,14,3,'This book keeps you on your toes'),
+(1,13,2,'I feel asleep reading this book'),
+(2,12,1,'Would not recommend'),
+(3,11,1,'I wish I could give 0 stars');
