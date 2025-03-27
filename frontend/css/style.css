@@ -1,3 +1,4 @@
+/*This allows the html element expands to at least the full height of the viewport.*/
 html {
     height:100%;
 }
@@ -13,7 +14,7 @@ body {
     flex-direction: column;
     height: 100%;
 }
-
+/*This allows the main content to expand and take up the available space, while making sure the footer stays at the bottom*/
 main {
     flex:1;
 }
@@ -35,6 +36,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
+/**This sets the text color to white, removes underline, adds padding for better clickability.*/
 .navbar a {
     color:white;
     text-decoration: none;
@@ -42,17 +44,19 @@ main {
     padding:10px 20px;
     
 }
+/*This styles the background color of the navbar to aquamarine when hovered*/
 .navbar a:hover{
     background-color: aquamarine;
     border-radius: 5px;
 
 }
 
-/*This styles the browse page*/
+/*This styles the browse page and ensures the text is justified.*/
 .browse-container {
     
     text-align: justify;
 }
+/*This creates a white container with padding and adds a margin and rounds the corner*/
 .Browse {
     background: white;
     padding: 20px;
@@ -60,38 +64,38 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba (0, 0, 0, 0.1);
 }
-/*This styles the tables*/
+/*This styles the tables, width to 100%, collapse to remove the space between the cell borders, adds a top marhin of 15px*/
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
 }
+/**This adds the padding 10x for better spacing, adds a light gray border to table cells*/
 th, td {
     padding: 10px;
     border: 1px solid #ccc;
 }
-/**This will add the spacing between title and description*/
+/**This will aligns the headle headers to the leftbottom padding*/
 th {
-    text-align: lef;
+    text-align: left;
     padding-bottom: 10px;
 }
-
+/*THis will increase the padding inside the table cells*/
 td {
     padding: 15px;
 }
-/*This styles the book images*/
-
+/*This mkes the book titles bold and increase font size*/
 .Book-Title {
     font-size: 18px;
     font-weight: bold;
 }
-
+/**This sets the book descriptions to a smaller font and dark gray color.*/
 .Description {
     font-size: 14px;
     color: #555;
 }
 
-/* This styles the Forms */
+/* This styles the Forms to white color, centers it, rounds corners and adds a subtle shadow.*/
 form {
     background: white;
     padding: 20px;
@@ -100,7 +104,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+/*This styles text, email and password input fields along with dropdowns, makes them full width, adds padding and rounds borders.*/
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -112,6 +116,7 @@ select {
     border-radius: 5px;
 }
 
+/**This styles the submit buttons, sets dark gray background, makes text white, removes default border*/
 input[type="submit"],
 button {
     background-color: #333;
@@ -123,13 +128,13 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-
+/**This changes color on hover*/
 input[type="submit"]:hover,
 button:hover {
     background-color: #575757;
 }
 
-/* Footer */
+/* This sets the footer background to dark grey, centers text and ensures it spans full width */
 footer {
     background-color: #333;
     color: white;
@@ -139,20 +144,72 @@ footer {
     bottom: 0;
     padding: 10px 0;
 }
-
+/**This remoes the default list styling*/
 footer ul {
     list-style: none;
     padding: 0;
 }
-
+/***This displays list items inline for horizontal layout.*/
 footer li {
     display: inline;
     padding: 0 10px;
 }
-
+/**THis adds a black border around reviews, adds margin for spacing*/
 .review {
     border: 3px solid black;
     margin: 6px;
 }
 
+/*This makes responsive websites*/
+@media (max-width: 768px) {
+    /* Navbar: This will Stack items vertically */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+    /* Adjust content layout */
+    #home-main, .browse-container, form {
+        width: 95%;
+        padding: 15px;
+    }
+    /* Reduce font size for better readability */
+    body {
+        font-size: 14px;
+    }
+    /* Tables should scroll instead of breaking */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    /* Make buttons larger for touchscreens */
+    input[type="submit"], button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* THis code is for the small devices  */
+@media(max-width: 480px) {
+    /* Reduce padding for small screens */
+    #home-main {
+        padding: 10px;
+    }
+    h2, h3 {
+        font-size: 18px;
+    }
+    .navbar a {
+        padding: 8px;
+        font-size: 14px;
+    }
+    /* This code will ensure the table is scrollable */
+    table {
+        font-size: 12px;
+    }
+}
 
