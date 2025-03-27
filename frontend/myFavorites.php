@@ -1,7 +1,9 @@
-<!--Thinsgs need to be done
-1)Add more books
-2)Make the book tiles more dynamic using javascript
-3)Arrange the books using the css and to style it.-->
+<!--Assignment Name: Book Cataloging System: Student Library-->
+<!--File Name: myFavorites.php-->
+<!--Course Name: Web development, CST 8285_332-->
+<!--Professor: Grace Pauly-->
+<!--Student Names: Felix-Zhonghan Lu, Aravind Santha, Anas Eddaoualline-->
+<!--Due Date: March 30, 2025-->
 
 
 <!DOCTYPE html>

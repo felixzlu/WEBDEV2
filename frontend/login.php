@@ -1,3 +1,10 @@
+<!--Assignment Name: Book Cataloging System: Student Library-->
+<!--File Name: addReview2.php-->
+<!--Course Name: Web development, CST 8285_332-->
+<!--Professor: Grace Pauly-->
+<!--Student Names: Felix-Zhonghan Lu-->
+<!--Due Date: March 30, 2025-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

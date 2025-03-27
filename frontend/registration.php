@@ -1,7 +1,9 @@
-<!--Things need to be done
-1) Form validation using javacsript
-2)CSS styling
-3) Add anything necessary-->
+<!--Assignment Name: Book Cataloging System: Student Library-->
+<!--File Name: registration.php-->
+<!--Course Name: Web development, CST 8285_332-->
+<!--Professor: Grace Pauly-->
+<!--Student Names: Felix-Zhonghan Lu, Aravind Santha, Anas Eddaoualline-->
+<!--Due Date: March 30, 2025-->
 
 <!DOCTYPE html>
 <html lang="en">
