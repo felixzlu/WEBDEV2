@@ -6,14 +6,15 @@
 <!--Due Date: March 30, 2025-->
 
 <?php
-    require_once('../backend/db_credentials.php');
-    require_once('../backend/database.php');
-    $db = db_connect();
+//This php function includes and executes the specified file only once during the script execution
+    require_once('../backend/db_credentials.php');//This contains the database connection credentials
+    require_once('../backend/database.php');//This contains the database logic 
+    $db = db_connect();//This is used to establish a connection to the database
 
-    //This will fetch the books from the database
+    //This will fetch the books from the database that are added by date in ascending order
     $sql= "SELECT * FROM books ORDER BY date_added ASC LIMIT 5";
     $result_set = mysqli_query($db, $sql); 
-
+//This will fetch the books that are top rated.
     $sql2 = "SELECT b.title, b.description, AVG(r.star_rating) AS avg_rating FROM books b JOIN reviews r ON b.id = r.books_id GROUP BY b.title, b.description ORDER BY avg_rating DESC LIMIT 5;";
     $result_set2 = mysqli_query($db,$sql2);
 
