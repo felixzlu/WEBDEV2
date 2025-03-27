@@ -1,3 +1,10 @@
+/*Assignment Name: Book Cataloging System: Student Library
+*File Name: database_creation.sql
+*Course Name: Web development, CST 8285_332
+*Professor: Grace Pauly
+*Student Names: Felix-Zhonghan Lu, Aravind Santha, Anas Eddaoualline
+*Due Date: March 30, 2025*/
+
 DROP DATABASE IF EXISTS online_library;
 CREATE DATABASE online_library;
 GRANT USAGE ON *.* TO 'root'@'localhost' IDENTIFIED BY '';
