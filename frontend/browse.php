@@ -15,7 +15,7 @@
     $sql= "SELECT * FROM books ORDER BY date_added ASC LIMIT 5";
     $result_set = mysqli_query($db, $sql); 
 //This will fetch the books that are top rated.
-    $sql2 = "SELECT b.title, b.description, AVG(r.star_rating) AS avg_rating FROM books b JOIN reviews r ON b.id = r.books_id GROUP BY b.title, b.description ORDER BY avg_rating DESC LIMIT 5;";
+    $sql2 = "SELECT b.id,b.title, b.description, AVG(r.star_rating) AS avg_rating FROM books b JOIN reviews r ON b.id = r.books_id GROUP BY b.id, b.title, b.description ORDER BY avg_rating DESC LIMIT 5;";
     $result_set2 = mysqli_query($db,$sql2);
 
 
@@ -44,42 +44,30 @@
             <div class ="browse-container">
                 <!--Wrapper for new additions section-->
                     <h2>New Additions</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                        <div class="container">
+                            
                                 <?php while($row=mysqli_fetch_assoc($result_set)) {?>
-                                
-                                <tr>
-                                    <td><?php echo $row['title'] ?></td>
-                                    <td><?php echo $row['description'] ?></td>
-                                </tr>
-                                </tr><?php } ?>
-                            </tbody>
-                        </table>
+                                <div class="flex-element">
+                                    <p><strong><?php echo $row['title'] ?></strong></p>
+                                    <p><?php echo $row['description'] ?></p>
+                                    <p><a href="view.php?id=<?php echo $row['id']; ?>">View</a></p>
+                                </div>
+                                <?php } ?>
+                        </div>
+
                         <h2>Overall Top picks</h2>
-                        <table>
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Average Star Rating</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                        <div class="container">
+
                             <?php while($row=mysqli_fetch_assoc($result_set2)) {?>
-                            <tr>
-                                <td><?php echo $row['title'] ?></td>
-                                <td><?php echo $row['description'] ?></td>
-                                <td><?php echo $row['avg_rating'] ?></td>
-                            </tr>
+                            <div class="flex-element">
+                                <p><strong><?php echo $row['title'] ?></strong></p>
+                                <p><?php echo $row['description'] ?></p>
+                                <p>Rating: <?php echo $row['avg_rating'] ?></p>
+                                <p><a href="view.php?id=<?php echo $row['id']; ?>">View</a></p>
+                            </div>
                             <?php } ?>
-                        </tbody>
-                        </table>         
+
+                        </div>         
             </div>
         </main>
 <footer> <!--This contains information about the privacy statements and Site map-->

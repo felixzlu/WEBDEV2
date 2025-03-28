@@ -36,42 +36,32 @@
         <h1>Book List</h1>
         <a href="addBook.php">Add Book to Database</a>
         
-        <table>
-        <tr>
-            <td>id</td>
-            <td>title</td>
-            <td>author</td>
-            <td>year</td>
-            <td>genre</td>
-            <td>&nbsp</td>
-            <td>&nbsp</td>
-            <td>&nbsp</td>
-            <td>&nbsp</td>
+        <div class="container">
+        
         <?php while($result = mysqli_fetch_assoc($result_set)) { ?>
-        <tr>
-            <td><?php echo $result['id']; ?></td>
-            <td><?php echo $result['title']; ?></td>
-            <td><?php echo $result['author'] ; ?></td>
-            <td><?php echo $result['year']; ?></td>
-            <td><?php echo $result['genre']; ?></td>
-            <td><a href="view.php?id=<?php echo $result['id']; ?>">View</a></td>
-            <td><a href="addReview.php?bookid=<?php echo $result['id']; ?>">Write a review</a></td>
+        <div class="flex-element">
+            <p><?php echo $result['id']; ?></p>
+            <p><strong><?php echo $result['title']; ?></strong></p>
+            <p><?php echo $result['author'] ; ?></p>
+            <p><?php echo $result['year']; ?></p>
+            <p><?php echo $result['genre']; ?></p>
+            <p><a href="view.php?id=<?php echo $result['id']; ?>">View</a></p>
+            <p><a href="addReview.php?bookid=<?php echo $result['id']; ?>">Write a review</a></p>
 
             <?php 
                 $sql2 = "SELECT * FROM favorites WHERE books_id =".$result['id']." AND users_id=".$_SESSION['id'].";";
                 $result_set2 = mysqli_query($db, $sql2);
                 if(mysqli_num_rows($result_set2)==0){ ?>
-                    <td><a href="addFavorite.php?bookid=<?php echo $result['id']; ?>">Add to favorites</a></td>
+                    <p><a href="addFavorite.php?bookid=<?php echo $result['id']; ?>">Add to favorites</a></p>
                 <?php } else { ?>
-                    <td><a href="deleteFavorite.php?bookid=<?php echo $result['id']; ?>">Delete from favorites</a></td>
+                    <p><a href="deleteFavorite.php?bookid=<?php echo $result['id']; ?>">Delete from favorites</a></p>
                 <?php }      
             ?>
 
-            
-            <td><a href="delete.php?id=<?php echo $result['id']; ?>" onclick="return confirmDelete();">Delete</a></td>
-        </tr>
+            <p><a href="delete.php?id=<?php echo $result['id']; ?>" onclick="return confirmDelete();">Delete</a></p>
+        </div>
         <?php } ?>
-        </table>
+        </div>
         </main>
         <?php include ("footer.php") ?>
     </body>

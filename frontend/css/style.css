@@ -222,3 +222,23 @@ footer li {
     }
 }
 
+.container{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-col{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.flex-element{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    min-width: 300px;
+    max-width: 350px;
+}

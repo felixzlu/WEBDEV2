@@ -44,16 +44,17 @@
 ?>
 <h1>Search results:</h1>
 
-<table>
+<div class="container">
     <?php while($row=mysqli_fetch_assoc($result_set)){?>
-    <tr>
-        <td><?php echo $row['title']?></td>
-        <td><?php echo $row['author']?></td>
-        <td><?php echo $row['year']?></td>
-        <td><?php echo $row['genre']?></td>
-    </tr>
+    <div class="flex-element">
+        <p><?php echo $row['title']?></p>
+        <p><?php echo $row['author']?></p>
+        <p><?php echo $row['year']?></p>
+        <p><?php echo $row['genre']?></p>
+        <p><a href="view.php?id=<?php echo $row['id']; ?>">View</a></p>
+    </div>
     <?php }?>
-</table>
+    </div>
 
 <?php include ("footer.php") ?>
 </body>

@@ -34,20 +34,15 @@
         $result_set = mysqli_query($db, $sql);
     ?>
 
-    <table>
-        <tr>
-            <td>title</td>
-            <td>author</td>
-            <td>&nbsp</td>
-        </tr>
+    <div class="container">
         <?php while($result = mysqli_fetch_assoc($result_set)) { ?>
-        <tr>
-            <td><?php echo $result['title']?></td>
-            <td><?php echo $result['author']?></td>
-            <td><a href="deleteFavorite.php?bookid=<?php echo $result['id']?>">Remove favourite</a></td>
-        </tr>    
+        <div class="flex-element">
+            <p><?php echo $result['title']?></p>
+            <p><?php echo $result['author']?></p>
+            <p><a href="deleteFavorite.php?bookid=<?php echo $result['id']?>">Remove favourite</a></p>
+        </div>    
         <?php } ?>
-    </table>
+        </div>
 
 
 
