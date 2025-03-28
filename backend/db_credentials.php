@@ -6,10 +6,11 @@
 <!--Due Date: March 30, 2025-->
 
 <?php
-
-define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASS", "");
-define("DB_NAME", "online_library");
+/***This defines the database connection constants
+ */
+define("DB_SERVER", "localhost");//This is the database server, localhost
+define("DB_USER", "root");//Database username, root is local with xampp
+define("DB_PASS", "");//This is the database password, usually empty for local development
+define("DB_NAME", "online_library");//The databse name to connect to online_library
 
 ?>
