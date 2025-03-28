@@ -5,6 +5,8 @@ Professor: Grace Pauly
 Student Names: Felix-Zhonghan Lu, Aravind Santha, Anas Eddaoualline
 Due Date: March 30, 2025*/
 
+/**This is a validate function for the form submission to add books.
+ * It ensures the values are properly entered before submission */
 function validate(){
 
     let flag = true;
@@ -62,10 +64,10 @@ function validate(){
 
     return flag;
 }
-
+/***Addeventlistener ensures that each field is monitored for live updates and users can see the feedback instantly as they type.*/
 document.getElementById("title").addEventListener("input", function(){
 
-    let regexTitle = /^(?!\s*$)[^']{1,255}$/;
+    let regexTitle = /^(?!\s*$)[^']{1,255}$/;//This regex ensures the input accepts the necessary inputs.
     let errorTitle = document.getElementById("errortitle");
     let inputTitle = document.getElementById("title").value;
 
@@ -92,7 +94,7 @@ document.getElementById("author").addEventListener("input", function(){
         document.getElementById("author").style.borderColor = "red";
     }
 });
-
+/***This code is to validate the year entered in the form */
 document.getElementById("year").addEventListener("input", function(){
 
     let regexYear = /^\d{4}$/;
@@ -107,7 +109,7 @@ document.getElementById("year").addEventListener("input", function(){
         document.getElementById("year").style.borderColor = "red";
     }
 });
-
+/***This code is to vlidate the genre function */
 document.getElementById("genre").addEventListener("input", function(){
 
     let regexGenre = /^(?!\s*$)[^']{1,255}$/;
@@ -122,7 +124,7 @@ document.getElementById("genre").addEventListener("input", function(){
         document.getElementById("genre").style.borderColor = "red";
     }
 });
-
+/***This code is for the add event listener for the Description in the form */
 document.getElementById("description").addEventListener("input", function(){
 
     let regexDesc = /^(?!\s*$)[^']{1,255}$/;
