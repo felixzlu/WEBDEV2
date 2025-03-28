@@ -22,6 +22,7 @@
         $db = db_connect();
         $sql = "SELECT * FROM books;";
         $result_set = mysqli_query($db, $sql);
+        confirm_result_set($result_set);
     ?>
 
         <?php include ("header.php") ?>
