@@ -74,9 +74,11 @@ document.getElementById("email").addEventListener("input", function(){
     let inputEmail = document.getElementById("email").value;
 
     if (regexEmail.test(inputEmail)) {
+/***If all the conditions are met, this passes the validation */
         errorEmail.innerHTML = "";
         document.getElementById("email").style.borderColor = "unset";
     } else {
+/***If the given conditions are not met, this styles the input field to red */
         errorEmail.innerHTML = "<p style='color: red;'>&#x274C Email address should be non-empty with the format xyz@xyz.xyz</p>";
         document.getElementById("email").style.borderColor = "red";
     }
@@ -105,11 +107,12 @@ document.getElementById("password").addEventListener("input", function(){
     let regexPassword = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
     let errorPassword = document.getElementById("errorpassword");
     let inputPassword = document.getElementById("password").value;
-
+/***If the given conditions are met, this passes the validation */
     if (regexPassword.test(inputPassword)) {
         errorPassword.innerHTML = "";
         document.getElementById("password").style.borderColor = "unset";
     } else {
+/**If the given conditons are not met, the input field turns to red until the given conditions are met***/
         errorPassword.innerHTML = "<p style='color: red;'>&#x274C Password should be at least 8 characters. 1 uppercase, 1 lowercase.</p>";
         document.getElementById("password").style.borderColor = "red";
     }
@@ -124,7 +127,7 @@ document.getElementById("password2").addEventListener("input", function(){
     let inputPassword = document.getElementById("password").value;
     let errorPassword2 = document.getElementById("errorpassword2");
     let inputPassword2 = document.getElementById("password2").value;
-
+/**If the given conditons are not met, the input field turns to red until the given conditions are met***/
     if (!(inputPassword2 === inputPassword) || (inputPassword2 === "")) {
         errorPassword2.innerHTML = "<p style='color: red;'>&#x274C Passwords should match and should not be blank.</p>";
         document.getElementById("password2").style.borderColor = "red";
@@ -142,6 +145,7 @@ document.getElementById("terms").addEventListener("change", function(){
     if (terms.checked) {
         errorTerms.innerHTML = "";
     } else{
+/**If the user do not select the terms and conditions, the input field turns to red and asks to accept the terms and conditions.**/
         errorTerms.innerHTML = "<p style='color: red; display:inline;'>&#x274C Please accept the terms and conditions.</p>";
     }
 });

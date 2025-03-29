@@ -97,6 +97,7 @@ document.getElementById("author").addEventListener("input", function(){
         errorAuthor.innerHTML = "";
         document.getElementById("author").style.borderColor = "unset";
     } else {
+/***This code will give error and styles the box red, if the conditions are not met. */
         errorAuthor.innerHTML = "<p style='color: red;'>&#x274C Author name should be non-empty, not have apostrophes, and not be longer than 255 characters.</p>";
         document.getElementById("author").style.borderColor = "red";
     }
@@ -107,11 +108,12 @@ document.getElementById("year").addEventListener("input", function(){
     let regexYear = /^\d{4}$/;
     let errorYear = document.getElementById("erroryear");
     let inputYear = document.getElementById("year").value;
-
+/***If all the conditions are met, this passes the validation */
     if (regexYear.test(inputYear)) {
         errorYear.innerHTML = "";
         document.getElementById("year").style.borderColor = "unset";
     } else {
+/***This code will give error and styles the input field red in the form if the conditions are not met */
         errorYear.innerHTML = "<p style='color: red;'>&#x274C Year should be between 0000 and 9999 inclusive.</p>";
         document.getElementById("year").style.borderColor = "red";
     }
@@ -122,11 +124,12 @@ document.getElementById("genre").addEventListener("input", function(){
     let regexGenre = /^(?!\s*$)[^']{1,255}$/;
     let errorGenre = document.getElementById("errorgenre");
     let inputGenre = document.getElementById("genre").value;
-
+/***If all the conditions are met, this passes the validation */
     if (regexGenre.test(inputGenre)) {
         errorGenre.innerHTML = "";
         document.getElementById("genre").style.borderColor = "unset";
     } else {
+/***This code will give error and styles the input field red in the form if the conditions are not met */
         errorGenre.innerHTML = "<p style='color: red;'>&#x274C Genre should not be blank, not have apostrophes, and not be longer than 255 characters.</p>";
         document.getElementById("genre").style.borderColor = "red";
     }
@@ -142,6 +145,7 @@ document.getElementById("description").addEventListener("input", function(){
         errorDesc.innerHTML = "";
         document.getElementById("description").style.borderColor = "unset";
     } else {
+/***This code will give error and styles the input field red in the form if the conditions are not met */
         errorDesc.innerHTML = "<p style='color: red;'>&#x274C Description should not be blank, not have apostrophes, and not be longer than 255 characters.</p>";
         document.getElementById("description").style.borderColor = "red";
     }
