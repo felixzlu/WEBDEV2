@@ -17,23 +17,22 @@
 //This will fetch the books that are top rated.
     $sql2 = "SELECT b.id,b.title, b.description, AVG(r.star_rating) AS avg_rating FROM books b JOIN reviews r ON b.id = r.books_id GROUP BY b.id, b.title, b.description ORDER BY avg_rating DESC LIMIT 5;";
     $result_set2 = mysqli_query($db,$sql2);
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Browse</title>
+<!---Link to the external css link---->
         <link rel ="stylesheet" href= "./css/style.css">
+<!---Link to the external javascript link-->
         <script src="./js/script.js"></script>
     </head>
     <body>
         <?php include ("header.php"); ?>
         <?php
+        /***This will check if the user is logged in, if not redirect to the login page* */
         if (!isset($_SESSION['id'])) {
             header("Location: youMustLogin.php");
             exit();
@@ -45,11 +44,12 @@
                 <!--Wrapper for new additions section-->
                     <h2>New Additions</h2>
                         <div class="container">
-                            
+                            <!--This loops through the fetched books and displays them--->
                                 <?php while($row=mysqli_fetch_assoc($result_set)) {?>
                                 <div class="flex-element">
+                                <!--This displays the book description-->
                                     <p><strong><?php echo $row['title'] ?></strong></p>
-                                    <p><?php echo $row['description'] ?></p>
+                                    <p><?php echo $row['description'] ?></p><!---This displays the book informations-->
                                     <p><a href="view.php?id=<?php echo $row['id']; ?>">View</a></p>
                                 </div>
                                 <?php } ?>
@@ -60,6 +60,7 @@
 
                             <?php while($row=mysqli_fetch_assoc($result_set2)) {?>
                             <div class="flex-element">
+                            <!---This displays the rating of the book-->
                                 <p><strong><?php echo $row['title'] ?></strong></p>
                                 <p><?php echo $row['description'] ?></p>
                                 <p>Rating: <?php echo $row['avg_rating'] ?></p>

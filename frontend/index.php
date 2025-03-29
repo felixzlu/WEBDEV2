@@ -11,7 +11,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Link to the external css stylesheet-->
         <link rel="stylesheet" href="./css/style.css">
+        <!--Link to the external javascript file-->
         <script src="./js/script.js"></script>
         <title>Home</title>
     </head>
@@ -20,6 +22,7 @@
         <?php include ("header.php") ?>
         </header>
         <main id ="home-main">
+        <!---This is the landing page for the website-->
         <h2>Welcome to the Online Library</h2>
         <p>
             Our library is a free resource for all students, offering a collection of books 

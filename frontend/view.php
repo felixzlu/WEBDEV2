@@ -16,9 +16,10 @@
     <?php include ("header.php") ?>
     <main>
     <?php
-        require_once('../backend/db_credentials.php');
-        require_once('../backend/database.php');
-        $db = db_connect();
+//This php function includes and executes the specified file only once during the script execution
+        require_once('../backend/db_credentials.php');//This contains the database connection credentials
+        require_once('../backend/database.php');//This contains the database logic 
+        $db = db_connect();//This connects to the database.
 
         $id = $_GET['id'];
 

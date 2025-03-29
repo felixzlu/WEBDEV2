@@ -15,6 +15,7 @@
     <title>You Must Login</title>
 </head>
 <body>
+<!--This asks the user to login whenever they click on browse/search/myfavourites on the header bar.-->
     <?php include ("header.php") ?>
     <main>
     You must login to perform this action.

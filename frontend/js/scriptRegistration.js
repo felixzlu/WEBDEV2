@@ -91,11 +91,12 @@ document.getElementById("username").addEventListener("input", function(){
     let regexLogin = /^(?!\s*$).{1,29}$/;
     let errorLogin = document.getElementById("errorlogin");
     let inputLogin = document.getElementById("username").value;
-
+/***If the given conditions are met, this allows the form for submission */
     if (regexLogin.test(inputLogin)) {
         errorLogin.innerHTML = "";
         document.getElementById("username").style.borderColor = "unset";
     } else {
+/***If the given conditions are not met, the input field in the form turns to re. */
         errorLogin.innerHTML = "<p style='color: red;'>&#x274C User name should be non-empty and under 30 characters long.</p>";
         document.getElementById("username").style.borderColor = "red";
     }
