@@ -9,6 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----link for the external css stylesheet---->
     <link rel="stylesheet" href="./css/style.css">
     <title>View Book</title>
 </head>
@@ -21,35 +22,40 @@
         require_once('../backend/database.php');//This contains the database logic 
         $db = db_connect();//This connects to the database.
 
-        $id = $_GET['id'];
-
+        $id = $_GET['id'];//establish a database connection
+/****Sql query to fetch book details based on the provided ID */
         $sql = "SELECT * FROM books WHERE id='$id';";
-        $result_set = mysqli_query($db, $sql);
+
+        $result_set = mysqli_query($db, $sql);//Execute the query
         $result = mysqli_fetch_assoc($result_set);
     ?>
+    <!---Display book information(title, author, year, genre, description-->
     <h1><?php echo $result['title']; ?></h1>
     <p>Author: <?php echo $result['author']; ?></p>
     <p>Year: <?php echo $result['year']; ?></p>
     <p>Genre: <?php echo $result['genre']; ?></p>
     <p>Description: <?php echo $result['description']; ?></p>
+    <!---link to the page for writing a review for the current book---->
     <a href="addReview.php?bookid=<?php echo $id; ?>">Write a review</a>
 
 
     <?php 
+    /****Sql query to fetch reviews related to the current book */
         $sql2 = "SELECT * FROM reviews WHERE books_id = $id";
         $result_set2 = mysqli_query($db, $sql2);
 
         
-
+/****This loops through all the reviews and displays them */
         while($result2 = mysqli_fetch_assoc($result_set2)){ ?>
 
             <?php 
+        /****This fetch the users details who wrote the review for each review */
             $sql3 = "SELECT * FROM users WHERE id =" . $result2['users_id'];
             $result_set3 = mysqli_query($db, $sql3);
             $result3 = mysqli_fetch_assoc($result_set3);
             ?>
 
-
+<!--Displays the review information(username, rating and comment--->
             <div class="review">
                 <p>User <?php echo $result3['username']; ?> wrote:</p>
                 <p>Rating: <?php echo $result2['star_rating']?> star(s)</p>

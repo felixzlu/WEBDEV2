@@ -15,13 +15,15 @@
 </head>
 <body>
 <?php
+/***Start a new session */
 session_start();
-
+/***This unsets all session to log the user out */
 session_unset();
-
+/***This logs the user out */
 session_destroy();
 
 include ("header.php");
+/***This diplays the message that the user successfully logged out */
 echo "successfully signed out.";
 include ("footer.php");
 
